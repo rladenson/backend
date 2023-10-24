@@ -32,7 +32,7 @@ app.get("/token", (req, res) => {
   } while (token.length === 0 || tokens.indexOf(token) !== -1);
   token = new Token(token);
   tokens.push(token);
-  res.send(token);
+  res.send(token.id);
 });
 app.get("/tokens", (req, res) => {
   res.send(tokens);
